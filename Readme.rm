@@ -1,1 +1,47 @@
 https://reprap.org/wiki/Prusa_i3_Build_Manual
+
+Box Frame Style
+
+A box frame Prusa i3.
+Materials
+Rods
+Source: https://github.com/josefprusa/Prusa3/blob/master/box_frame/doc/dimensions.md
+
+X Axis
+2x 470mm M8 smooth rod
+1x 20mm M8 smooth (for extruder idler, use 8x20 threaded rod or grub screw instead as substitute)
+If you want to play with the X length, you will have to cut the top (longest) plate as long as the smooth rod and one of the 450mm is actually (X rod length - 2x plate thickness) long. The rods may be longer, but should not be shorter by more than 1cm.
+
+Y Axis
+2x 370mm M8 smooth rods
+2x 400mm M10 threaded rod
+4x 205mm M8 threaded rods
+Z Axis
+2x 405mm M8 smooth rod
+2x ~370mm M5 threaded rod
+You could play with the Z lengths to increase building height.
+
+For this you will need longer wood cut for 4 of the 450x100mm plates; the plates are (Z rod length + 45mm) long.
+
+Wood
+The wood pieces can be cut from one 24x48x1/2" sheet of plywood.
+
+The default thickness is 12mm (near 1/2"). Get something that is strong and not likely to warp (change shape) due to temperature and humidity! The thickness is mostly needed to hold the screws used hold the frame together and to mount parts onto it. The entire frame structure must be stiff, holding its shape regardless of what it's sitting on.
+
+Any wood over 12mm thickness will not work for the bottom plate with default config, as the Y will then be lifted from the ground. So if you are using thicker wood for the frame, be sure to change board_thickness in configuration.scad before printing parts.
+
+6x 450x100x12mm wood
+1x 475x100x15mm wood
+60x 3.5x20mm (or #6 x 3/4”) wood screws
+Wood glue (optional)
+Sealant or paint (optional)
+Wood warps as humidity changes. To minimize this, select pieces with uniform edge-grain without knots. Oak, poplar, and birch are good choices. Using a wood sealant will minimize changes in moisture content. A thin, light, unsealed wood should be used for the heated bed. A heavy bed will limit print speed and quality, and the heat will break down the sealant. Even paraffin wood sealants designed for saunas wouldn't be able to keep steam from leaving the surface if it gets close to 100°C. It would, however, prevent moisture from returning to that surface after cooldown. Uneven moisture content is what CAUSES warping, so this is a bad idea.
+
+Construction
+The exact width of the boards is not crucial, so long as the lengths are appropriate to the rods used. Note that the width of the bottom board limits how far forward the Y axis can be placed; this is compensated for by offsetting the linear bearings on the Y carriage/bed.
+
+If different board thicknesses are used, the design will have to be modified slightly.
+
+The Y axis M10 threaded rods should just clear the bottom of the frame, in order for the printed attachment points to sit at roughly the right level. The frame width (475mm) should be 5mm longer than the x axis smooth rod length (470mm).
+
+The 475mm board is longer so that it can span the whole frame width and overlap two other boards, which are 12mm thick. (450 + 12 + 12 ≈ 475mm).
